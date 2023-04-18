@@ -1,0 +1,162 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-image: url(/images/galaxy-night-landscape.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: white;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  width: 80%;
+}
+
+
+section .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+section nav .container {
+  position: relative;
+  z-index: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+section nav .container .logo a img {
+  width: 60px;
+  transition: 1s;
+}
+
+section nav a img:hover {
+  transform: rotate(360deg);
+}
+
+section nav ul {
+  list-style: none;
+  width: 100%;
+  text-align: right;
+  padding-left: 0;
+  padding-right: 20px;
+  margin: 0;
+}
+
+section nav ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+section nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+section nav ul li a:hover {
+  color: #ccc;
+  border-bottom: 1px solid #cccccc62;
+}
+
+section .head {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+section .head p {
+  letter-spacing: 10px;
+  line-height: 1.7;
+}
+
+section input {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: none;
+  background: #111;
+  margin: 4px 0;
+  border-radius: 4px;
+  padding: 4px;
+  color: white;
+}
+
+input:focus {
+  background: #000;
+  transform: scale(1.1);
+}
+
+.price input {
+  width: 20%;
+}
+
+#total {
+  background: red;
+  padding: 5px 2px;
+  border-radius: 4px;
+}
+
+#total::before {
+  content: "total: ";
+}
+
+button {
+  width: 100%;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background: red;
+  color: white;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+  
+
+#deleteAll {
+  margin: 20px 0;
+}
+
+button:hover {
+  background: rgba(255, 0, 0, 0.388);
+  letter-spacing: 1px;
+}
+
+.btnsearch {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnsearch button {
+  width: 45%;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+table th {
+  text-transform: uppercase;
+}
+
+th,
+td {
+  padding: 5px;
+}

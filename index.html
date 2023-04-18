@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cruds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/Normalize.css" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <section>
+      <nav>
+        <div class="container">
+          <div class="logo">
+            <a href=""><img src="/images/circle.png" alt="" /></a>
+          </div>
+          <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT US</a></li>
+            <li><a href="">GALLERY</a></li>
+            <li><a href="">LOCATION</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="head">
+        <div class="container">
+          <h2>CRUDS</h2>
+          <p>PRODUCT MANAGEMENT SYSTEM</p>
+        </div>
+      </div>
+      <div class="inputs">
+        <div class="container">
+          <input type="text" id="title" placeholder="title" />
+          <div class="price">
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="price"
+              placeholder="price"
+            />
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="taxes"
+              placeholder="taxes"
+            />
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="ads"
+              placeholder="ads"
+            />
+            <input
+              onkeyup="getTotal()"
+              type="number"
+              id="discount"
+              placeholder="discount"
+            />
+            <small id="total"></small>
+          </div>
+          <input type="number" id="count" placeholder="count" />
+          <input type="text" id="category" placeholder="category" />
+          <button id="submit">create</button>
+        </div>
+      </div>
+      <div class="outputs">
+        <div class="container">
+          <div class="searchblock">
+            <input onkeyup="searchData(this.value)" type="text"  id="search" placeholder="search" />
+            <div class="btnsearch">
+              <button onclick="getSearchMood(this.id)" id="searchtitle">search by title</button>
+              <button onclick="getSearchMood(this.id)" id="searchcategory">search by category</button>
+            </div>
+          </div>
+          <div id="deleteAll">
+            
+          </div>
+          <table>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>total</th>
+              <th>category</th>
+              <th>update</th>
+              <th>delete</th>
+            </tr>
+
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
